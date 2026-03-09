@@ -78,6 +78,8 @@ identifier : value
 
 This applies at every level, including nested objects. There is no special syntax for any value type.
 
+Duplicate keys within the same record are **illegal**. A parser **must** reject any record where the same key appears more than once. This applies at every nesting level independently — a key may be reused across different records or different nested objects, but never twice within the same `{ }`.
+
 ---
 
 ## Lexical rules
